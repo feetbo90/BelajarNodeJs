@@ -17,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/feetbo90/BelajarNodeJs/issues"
   },
-  "homepage": "https://github.com/feetbo90/BelajarNodeJs#readme"
+  "homepage": "https://github.com/feetbo90/BelajarNodeJs#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  },
+  "dependencies": {
+    "express": "^4.17.0"
+  }
 }
