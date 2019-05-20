@@ -4,6 +4,8 @@
 const express = require('express');
 const path = require('path');
 const rootDir = require('../util/path');
+const adminData = require('./admin');
+
 const Router = express.Router();
 
 Router.use('/',(req, res, next) => {
@@ -12,7 +14,7 @@ Router.use('/',(req, res, next) => {
 });
 
 Router.get('/',(req, res, next) => {
-    console.log("In the another middleware");
+    console.log('shop.js', adminData.products);
     //res.send('<h1>Hello from Express</h1>');
     res.sendFile(path.join(rootDir,'views','shop.html'));
 });
