@@ -16,7 +16,8 @@ Router.use('/',(req, res, next) => {
 Router.get('/',(req, res, next) => {
     console.log('shop.js', adminData.products);
     //res.send('<h1>Hello from Express</h1>');
-    res.sendFile(path.join(rootDir,'views','shop.html'));
+    //res.sendFile(path.join(rootDir,'views','shop.html'));
+    res.render('shop');
 });
 
 
