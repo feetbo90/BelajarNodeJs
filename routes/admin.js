@@ -7,11 +7,12 @@ const path = require('path');
 const rootDir = require('../util/path');
 
 const Router = express.Router();
-const products = []
+const products = [];
 
 Router.get('/add-product',(req, res, next) => {
     console.log("In the middleware");
-    res.sendFile(path.join(rootDir, 'views', 'add-product.html'));
+    res.render('add-product', {pageTitle : 'Product', pageAdd : 'Add Product', activeAddProduct: true, path: '/admin/add-product', formCSS: true, productCSS: true});
+    //res.sendFile(path.join(rootDir, 'views', 'add-product.html'));
     //res.send('<form action="/admin/add-product" method="POST"><input type="text" name="title"><button type="submit">Add Button</button></form><h1>Hello add product</h1>');
     //next();
 });
